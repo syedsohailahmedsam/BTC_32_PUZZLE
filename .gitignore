@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environment
+venv/
+.venv/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+
+# Data files (if you don't want to track them, e.g., large output CSVs or state files)
+data/*.csv
+data/*.txt
