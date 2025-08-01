@@ -30,5 +30,5 @@ Zero to negligible instances of these patterns have appeared in the first 70 puz
 
 This drastically reduces the keyspace, making brute-force search more intelligent and focused.
 
-📌 Summary Line (for README or Code)
+📌 Summary Line
 “No private keys have triples, repeated double pairs, or double 6/9/a/d — filtered to match historical puzzle patterns.”
