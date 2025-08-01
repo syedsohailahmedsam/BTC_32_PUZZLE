@@ -1,0 +1,34 @@
+This is not a blind brute-force tool. 
+It is an intelligently constrained search engine for keys that might satisfy the structure of Puzzles. 
+While still computationally difficult, filtering improves performance and feasibility.
+
+🔧 Want to adjust the rules? Just modify the is_valid_hex_key() logic in either script.
+
+Custom Filtering Rules were derived from previously found private keys of puzzles 1-70. You can see found private keys in "numbers.txt".
+
+In our analysis of all known solved Bitcoin cryptographic puzzles (Puzzles 1–70), we discovered that certain patterns have never appeared in any of the revealed private keys.
+
+❌ "No private keys have..." 
+We exclude any hex private key that contains:
+
+❌ Triple Characters
+No valid puzzle solution has ever had three identical hex characters in a row.
+Example: "aaa", "666", "fff", "000" → all are invalid
+
+❌ Repeated Double Pairs
+While a key might have a pair like "aa" or "ff", no key ever repeats the same pair.
+Example: "112211" → "11" appears twice → invalid
+
+❌ Double Characters from a Restricted Set (6, 9, a, d)
+Based on prior solutions, no valid key has ever had a double of these characters.
+Disallowed patterns: "66", "99", "aa", "dd"
+
+🧠 Why This Matters
+These exclusions are not random — they are based on actual solved keys from the Bitcoin Puzzle series.
+
+Zero to negligible instances of these patterns have appeared in the first 70 puzzles.
+
+This drastically reduces the keyspace, making brute-force search more intelligent and focused.
+
+📌 Summary Line (for README or Code)
+“No private keys have triples, repeated double pairs, or double 6/9/a/d — filtered to match historical puzzle patterns.”
